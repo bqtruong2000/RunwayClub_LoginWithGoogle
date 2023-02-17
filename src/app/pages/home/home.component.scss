@@ -1,0 +1,137 @@
+.contain {
+  display: flex;
+  flex-direction: row;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-contain {
+  margin: 5vh 0 0 60vh;
+  padding: 10px 20px 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 60vh;
+  height: 600px;
+  transition: 0.6s;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-Image {
+  margin-left: 150px;
+  width: 300px;
+  height: 300px;
+}
+
+.card-publishedAt {
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-content {
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-description {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#fixNav {
+  width: 100%;
+  height: 50px;
+  background-color: #525ddd;
+  display: block;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); /*Đổ bóng cho menu*/
+  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+  top: 0; /*Nằm trên cùng*/
+  left: 0; /*Nằm sát bên trái*/
+  z-index: 100000; /*Hiển thị lớp trên cùng*/
+}
+#fixNav ul {
+  margin: 10px;
+  padding: 0;
+}
+#fixNav ul li {
+  list-style: none inside;
+  width: auto;
+  float: left;
+  line-height: 35px; /*Cho text canh giữa menu*/
+  color: #fff;
+  padding: 0;
+  margin-right: 10px;
+  position: relative;
+}
+#fixNav ul li a {
+  text-transform: uppercase;
+  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+  padding: 0 10px;
+  color: #fff;
+  display: block;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+/*CSS Style cho Submenu*/
+#fixNav ul li ul {
+  position: absolute;
+  width: auto;
+  display: none;
+  background-color: #252525;
+  border-bottom: 3px solid #3b49df;
+  padding-left: 5px;
+}
+
+#fixNav ul li ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: none; /*Bỏ float cho li cấp thứ 2*/
+}
+/* Hover cho submenu */
+#fixNav ul li:hover {
+  /* Hover thì li sẽ đổi màu*/
+  background-color: #252525;
+}
+#fixNav ul li:hover ul {
+  /*Display ra submenu*/
+  display: block;
+}
+
+.run-way-club {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.search-bar {
+  margin: -2px 0 0 50px;
+  width: 500px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 10px;
+}
+
+#search-button {
+  height: 100%;
+  width: 50px;
+  background: transparent;
+  border: transparent;
+  font-size: 20px;
+  color: #f8f7fa;
+  cursor: pointer;
+  outline: 0;
+}
+
+.log-out-button {
+  margin: 50px 0 0 1800px;
+}

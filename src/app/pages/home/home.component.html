@@ -1,0 +1,52 @@
+<nav id="fixNav">
+  <ul>
+    <li class="run-way-club"><a href="#"> Runway Club</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Forum</a></li>
+    <li><a href="#">Newbie</a></li>
+    <li>
+      <a href="#">Topic</a>
+      <ul class="sub-menu">
+        <li><a href="#">Html & CSS</a></li>
+        <li><a href="#">PHP & MySQL</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </li>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div class="search-container">
+      <form action="">
+        <input
+          class="search-bar"
+          type="text"
+          placeholder="Search..."
+          name="search"
+        />
+        <button id="search-button" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </ul>
+</nav>
+<button
+  class="log-out-button"
+  [routerLink]="['/login']"
+  *ngIf="authService.currentUser"
+  (click)="authService.logOut()"
+>
+  <img [src]="authService.currentUser.photoURL" />
+  <a>{{ authService.currentUser.displayName }}</a
+  ><br />Log out
+</button>
+
+<div class="contain" *ngFor="let new of news$ | async">
+  <div class="card-contain">
+    <div class="card-title">{{ new.title }}</div>
+    <img class="card-Image" [src]="new.cover_image" />
+    <div class="card-description">{{ new.description }}</div>
+    <div class="card-publishedAt">{{ new.published_at }}</div>
+  </div>
+</div>
