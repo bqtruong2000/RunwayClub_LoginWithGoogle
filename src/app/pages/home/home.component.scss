@@ -52,11 +52,11 @@
   height: 50px;
   background-color: #525ddd;
   display: block;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); /*Đổ bóng cho menu*/
-  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
-  top: 0; /*Nằm trên cùng*/
-  left: 0; /*Nằm sát bên trái*/
-  z-index: 100000; /*Hiển thị lớp trên cùng*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
 }
 #fixNav ul {
   margin: 10px;
@@ -66,7 +66,7 @@
   list-style: none inside;
   width: auto;
   float: left;
-  line-height: 35px; /*Cho text canh giữa menu*/
+  line-height: 35px;
   color: #fff;
   padding: 0;
   margin-right: 10px;
@@ -74,14 +74,14 @@
 }
 #fixNav ul li a {
   text-transform: uppercase;
-  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+  white-space: nowrap;
   padding: 0 10px;
   color: #fff;
   display: block;
   font-size: 0.8em;
   text-decoration: none;
 }
-/*CSS Style cho Submenu*/
+
 #fixNav ul li ul {
   position: absolute;
   width: auto;
@@ -95,15 +95,13 @@
   display: block;
   padding: 0;
   margin: 0;
-  float: none; /*Bỏ float cho li cấp thứ 2*/
+  float: none;
 }
-/* Hover cho submenu */
+
 #fixNav ul li:hover {
-  /* Hover thì li sẽ đổi màu*/
   background-color: #252525;
 }
 #fixNav ul li:hover ul {
-  /*Display ra submenu*/
   display: block;
 }
 

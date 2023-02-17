@@ -10,7 +10,6 @@
           *ngIf="!authService.currentUser"
           (click)="authService.loginWithGoogle()"
           class="google-login-button"
-          [routerLink]="['/home']"
         >
           <img
             class="google-pic"
